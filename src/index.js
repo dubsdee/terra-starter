@@ -12,12 +12,20 @@ const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 //fetch available connection options
+// import wallet provider objects from the library
+// call the function to connect w/  Terra servers, check which chains and endpoints are available
 getChainOptions().then((chainOptions) => {
   ReactDOM.render(
     <React.StrictMode>
-      {/* wrap the app in a context provider for the wallet */}
+      {/* WALLET PROVIDER BLOCK - set up React context provider
+      context is a state across multiple parts of the app
+      makes certain data available to all its children if they want access
+      index is entry point of app - can access walletprovider everywhere
+      */}
       <WalletProvider {...chainOptions}>
         <div className="App-header">
+          {/* ROUTE - helps support different app paths? Not sure what, check docs later
+          */}
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<App />} />
