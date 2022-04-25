@@ -1,6 +1,7 @@
 import './App.css';
 // bring in the required gooks and wallet states
 import { useWallet, WalletStatus } from "@terra-money/wallet-provider";
+import { Wallet } from '@terra-money/terra.js';
 
 function App() {
   // current wallet status, connect and disconnect functions, available connections
@@ -17,8 +18,21 @@ function App() {
             onClick={() => connect("EXTENSION")}
             className="cta-button connect-wallet-button"
           >
+            Connect Wallet
           </button>
         </div>
+      );
+    }
+    // check if wallet is connected
+    else if (status === WalletStatus.WALLET_CONNECTED) {
+      return (
+        <button 
+          type="button"
+          onClick={() => disconnect()}
+          className="cta-button connect-wallet-button"
+        >
+          Disconnect
+        </button>
       );
     }
   };
@@ -40,8 +54,9 @@ function App() {
 
       <div>
       <iframe src="https://giphy.com/embed/mXz3v0UdjrNTO" width="429" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-dragonball-z-mXz3v0UdjrNTO"></a></p>
-        
       </div>
+
+      {renderConnectbutton()}
     </main>
   );
 }

@@ -75,7 +75,7 @@ span {
 }
 
 .connect-wallet-button {
-    background-image: linear-gradient(to right, #c267ee 0%, #51daec 100%);
+    background-image: linear-gradient(to right, #f2751c 0%, #0000b5 100%);
     background-size: 200% 200%;
     animation: gradient-animation 4s ease infinite;
 }
