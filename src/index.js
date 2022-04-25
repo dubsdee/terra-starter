@@ -43,7 +43,7 @@ getChainOptions().then((chainOptions) => {
               href={TWITTER_LINK}
               target="_blank"
               rel="noreferrer"
-            >{'Made with @${TWITTER_HANDLE}'}</a>
+            >{`Made with @${TWITTER_HANDLE}`}</a>
           </div>
         </div>
       </WalletProvider>

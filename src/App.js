@@ -15,7 +15,7 @@ function App() {
     <main className="App">
       <header>
         <div className="header-titles">
-          <h1>💥 Charge Up 💥</h1>
+          <h1>💥 ENEMIES INBOUND 💥</h1>
           <p> Get ready for battle! </p>
         </div>
 
