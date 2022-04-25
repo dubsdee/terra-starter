@@ -5,6 +5,23 @@ import { useWallet, WalletStatus } from "@terra-money/wallet-provider";
 function App() {
   // current wallet status, connect and disconnect functions, available connections
   const { status, connect, disconnect, availableConnectTypes } = useWallet();
+
+  // render a connect button to prompt wallet
+  const renderConnectbutton = () => {
+    if (status === WalletStatus.WALLET_NOT_CONNECTED) {
+      return (
+        <div className="connect-wallet-div">
+          <button
+            type="button"
+            key={`connect-EXTENSION`}
+            onClick={() => connect("EXTENSION")}
+            className="cta-button connect-wallet-button"
+          >
+          </button>
+        </div>
+      );
+    }
+  };
   
   // take a look at starting states - logs wallet status and available connection types
   console.log("Wallet status is ", status);
