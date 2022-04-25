@@ -5,6 +5,10 @@ import ReactDOM from 'react-dom';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import './index.css';
 
+import Play from './pages/play';
+import Guide from './pages/guide';
+import Leaderboard from './pages/leaderboard';
+
 // import wallet provider and util function
 import { getChainOptions, WalletProvider } from '@terra-money/wallet-provider';
 
@@ -29,6 +33,10 @@ getChainOptions().then((chainOptions) => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<App />} />
+              {/* new routes declared for pages, empty for now */}
+              <Route path="/play" element={<Play />} />
+              <Route path="/leaderboard" element={<Leaderboard />} />
+              <Route path="/guide" element={<Guide />} />
             </Routes>
           </BrowserRouter>
 
