@@ -1,7 +1,16 @@
 import './App.css';
+// bring in the required gooks and wallet states
+import { useWallet, WalletStatus } from "@terra-money/wallet-provider";
 
 function App() {
-
+  // current wallet status, connect and disconnect functions, available connections
+  const { status, connect, disconnect, availableConnectTypes } = useWallet();
+  
+  // take a look at starting states - logs wallet status and available connection types
+  console.log("Wallet status is ", status);
+  console.log("Available connection types: ", availableConnectTypes);
+  
+  
   return (
     <main className="App">
       <header>
