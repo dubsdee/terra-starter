@@ -6,17 +6,15 @@ function App() {
     <main className="App">
       <header>
         <div className="header-titles">
-          <h1>⚔ Goblin War ⚔</h1>
-          <p>Only you can save us from Goblin town</p>
+          <h1>💥 Charge Up 💥</h1>
+          <p> Get ready for battle! </p>
         </div>
 
       </header>
 
       <div>
-        <img
-          src="https://media.giphy.com/media/B19AYwNXoXtcs/giphy.gif"
-          alt="Goblin gif"
-        />
+      <iframe src="https://giphy.com/embed/mXz3v0UdjrNTO" width="429" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-dragonball-z-mXz3v0UdjrNTO"></a></p>
+        
       </div>
     </main>
   );
