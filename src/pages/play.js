@@ -74,7 +74,6 @@ const Play = () => {
         <LoadingIndicator />
       ) : (
         <div className="game-container">
-          {/* CHANGE THIS IMAGE! It's loaded from the public folder. */}
           <img src={"saibamen.png"} id="target" alt="Target" style={{ ...targetPosition }} onClick={handleClick} />
           <img src="gohan.png" id="gohan-img" alt="gohan" />
         </div>
