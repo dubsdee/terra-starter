@@ -183,7 +183,7 @@ span {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    height: 60px;
+    height: 200px;
 }
 
 .set-score-btn {
@@ -192,7 +192,9 @@ span {
 
 #gohan-img {
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 300px;
+    
 }
