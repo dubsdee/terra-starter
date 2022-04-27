@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import * as execute from '../contract/execute';
-import { useConnectedWallet, useConnectedWallet } from "@terra-dev/use-wallet";
-import { toConnectedWallet } from "@terra-money/wallet-provider";
+import { useConnectedWallet } from "@terra-money/wallet-provider";
+
 
 const Play = () => {
-    const useConnectedWallet = useConnectedWallet();
+    const connectedWallet = useConnectedWallet();
     const playTime = 15;
 
     const [score, setScore] = useState(0);
