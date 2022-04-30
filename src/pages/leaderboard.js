@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import * as query from '../contract/query';
 import { useConnectedWallet } from '@terra-money/wallet-provider';
 import { useState, useEffect } from 'react';
+//importing wallet address 
+import WalletAddress from "../components/WalletAddress"
 
 const Leaderboard = () => {
     const [scores, setScores] = useState();
@@ -65,6 +67,7 @@ const Leaderboard = () => {
                 )}
                 <div></div>
             </div>
+            <div><WalletAddress /></div>
         </main>
     );
 };

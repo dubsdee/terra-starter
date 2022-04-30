@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import * as execute from '../contract/execute';
 import { useConnectedWallet } from '@terra-money/wallet-provider';
 import LoadingIndicator from '../components/LoadingIndicator';
+import WalletAddress from "../components/WalletAddress";
+
 
 const Play = () => {
   const connectedWallet = useConnectedWallet();
@@ -64,6 +66,7 @@ const Play = () => {
   return (
     <div className="score-board-container">
       <div className="play-container">
+        <WalletAddress />
         <span>Score: {score}</span>
         <span>Fight!</span>
         <span>Time left: {time} s</span>

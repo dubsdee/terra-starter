@@ -10,7 +10,7 @@ const WalletAddress = () => {
         <div>
             {terraAddress && (
                 <button className="wallet-address">
-                    {terraAddress.slice(0.5) + "..." + terraAddress.slice(-4)}
+                    {terraAddress.slice(0,5) + "..." + terraAddress.slice(-4)}
                 </button>
             )}
         </div>

@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+//importing wallet address 
+import WalletAddress from "../components/WalletAddress"
 
 const Guide = () => {
   return (
@@ -28,6 +30,7 @@ const Guide = () => {
         </div>
         
       </div>
+      <WalletAddress />
     </main>
   );
 };

@@ -3,6 +3,8 @@ import './App.css';
 import { useWallet, WalletStatus } from "@terra-money/wallet-provider";
 import { Wallet } from '@terra-money/terra.js';
 import Menu from './components/Menu';
+//importing wallet address 
+import WalletAddress from './components/WalletAddress';
 
 function App() {
   // current wallet status, connect and disconnect functions, available connections
@@ -49,13 +51,12 @@ function App() {
           <h1>💥 ENEMIES INBOUND 💥</h1>
           <p> Get ready for battle! </p>
         </div>
-
       </header>
 
       {/* if not connected, show the dbz gif*/}
       {status === WalletStatus.WALLET_NOT_CONNECTED && (
         <div>
-          <iframe src="https://giphy.com/embed/mXz3v0UdjrNTO" width="429" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-dragonball-z-mXz3v0UdjrNTO"></a></p>
+          <iframe src="https://giphy.com/embed/mXz3v0UdjrNTO" width="429" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-dragonball-z-mXz3v0UdjrNTO"></a></p>
         </div>
       )}
     
@@ -67,7 +68,10 @@ function App() {
         )}
       
       {renderConnectbutton()}
+    
+    <WalletAddress />
     </main>
+    
   );
 }
 
