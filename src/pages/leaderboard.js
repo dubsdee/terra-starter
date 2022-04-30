@@ -67,7 +67,7 @@ const Leaderboard = () => {
                 )}
                 <div></div>
             </div>
-            <div><WalletAddress /></div>
+            <WalletAddress />
         </main>
     );
 };
